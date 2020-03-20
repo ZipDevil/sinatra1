@@ -1,3 +1,16 @@
+<!--display as many candles as the user requests. -->
 
-
-display as many candles as the user requests. 
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <%=	@n = params[:candles].to_i %>
+    <% if @n == 1 %>
+      <p>"You only got one candle. Come on, get some more!"</p>
+    <% elsif @n > 1 %>
+      <p>"Hooray, You got <%= @n %> candles."</p>
+    <% else %>
+      <p>"You sure you don't want any candle at all?"</p>
+    <% end %>
+  </body>
+</html>
